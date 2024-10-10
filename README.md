@@ -1,24 +1,30 @@
-# advent_of_gleam
+# Advent of Gleam
 
-[![Package Version](https://img.shields.io/hexpm/v/advent_of_gleam)](https://hex.pm/packages/advent_of_gleam)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/advent_of_gleam/)
+[Advent of Code](https://adventofcode.com/) solutions in [Gleam](https://gleam.run/).
 
-```sh
-gleam add advent_of_gleam@1
-```
-```gleam
-import advent_of_gleam
+## Why
 
-pub fn main() {
-  // TODO: An example of the project in use
-}
-```
+- Gleam is fun
+- [I ran out of Gleam exercises on Exercism](https://exercism.org/profiles/mtsknn/solutions?track_slug=gleam)
 
-Further documentation can be found at <https://hexdocs.pm/advent_of_gleam>.
+## To run individual days' puzzles
 
-## Development
+1. [Install Gleam](https://gleam.run/getting-started/installing/)
+2. ```sh
+   gleam run -m year_2023/day_01
+   ```
 
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-```
+## To use your own puzzle inputs
+
+Create e.g. `src/year_2023/day_01_input.txt` (ignored by Git).
+
+Otherwise only example inputs will be used.
+
+## Solutions
+
+- [`year_2023/day_01.gleam`](./src/year_2023/day_01.gleam) × [adventofcode.com/2023/day/1](https://adventofcode.com/2023/day/1)
+- [`year_2023/day_02.gleam`](./src/year_2023/day_02.gleam) × [adventofcode.com/2023/day/2](https://adventofcode.com/2023/day/2)
+- [`year_2023/day_03.gleam`](./src/year_2023/day_03.gleam) × [adventofcode.com/2023/day/3](https://adventofcode.com/2023/day/3)
+- [`year_2023/day_04.gleam`](./src/year_2023/day_04.gleam) × [adventofcode.com/2023/day/4](https://adventofcode.com/2023/day/4)
+  - Part 2 was silly (i.e. fun),
+    and I like how simple my `number_list_to_numbers` function turned out.
