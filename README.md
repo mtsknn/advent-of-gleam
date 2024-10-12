@@ -10,8 +10,19 @@
 ## Running locally
 
 1. [Install Gleam](https://gleam.run/getting-started/installing/)
-2. ```sh
+2. Run all tests:
+   ```sh
    gleam test
+   ```
+   Or start watch mode
+   (possible thanks to [Glacier](https://github.com/inoas/glacier)):
+   ```sh
+   gleam test -- --glacier
+   ```
+   Or run a single day's tests
+   (this too is possible thanks to Glacier):
+   ```sh
+   gleam test -- test/year_2023/day_01_test.gleam
    ```
 
 ### About puzzle inputs and tests
