@@ -30,7 +30,7 @@
 The tests use the example inputs from adventofcode.com.
 
 To also use your own puzzle inputs,
-create e.g. `src/year_2023/day_01_input.txt` (ignored by Git).
+create e.g. `test/year_2023/day_01_input.txt` (ignored by Git).
 Though note that the test assertions use my personal results
 (your results will be different with your own puzzle inputs).
 
