@@ -7,18 +7,21 @@
 - Gleam is fun
 - [I ran out of Gleam exercises on Exercism](https://exercism.org/profiles/mtsknn/solutions?track_slug=gleam)
 
-## To run individual days' puzzles
+## Running locally
 
 1. [Install Gleam](https://gleam.run/getting-started/installing/)
 2. ```sh
-   gleam run -m year_2023/day_01
+   gleam test
    ```
 
-## To use your own puzzle inputs
+### About puzzle inputs and tests
 
-Create e.g. `src/year_2023/day_01_input.txt` (ignored by Git).
+The tests use the example inputs from adventofcode.com.
 
-Otherwise only example inputs will be used.
+To also use your own puzzle inputs,
+create e.g. `src/year_2023/day_01_input.txt` (ignored by Git).
+Though note that the test assertions use my personal results
+(your results will be different with your own puzzle inputs).
 
 ## Solutions
 

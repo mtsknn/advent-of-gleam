@@ -3,16 +3,15 @@ import gleam/list
 import gleam/regex.{Match}
 import gleam/result
 import gleam/string
-import utils
 
-const part_1_example_input = "
+pub const part_1_example_input = "
 1abc2
 pqr3stu8vwx
 a1b2c3d4e5f
 treb7uchet
 "
 
-const part_2_example_input = "
+pub const part_2_example_input = "
 two1nine
 eightwothree
 abcone2threexyz
@@ -22,18 +21,7 @@ zoneight234
 7pqrstsixteen
 "
 
-pub fn main() {
-  #(part_1(part_1_example_input), part_2(part_2_example_input))
-  |> utils.log_example_results
-
-  utils.read_input(2023, 1)
-  |> result.map(fn(input) {
-    #(part_1(input), part_2(input))
-    |> utils.log_full_results
-  })
-}
-
-fn part_1(input: String) -> Int {
+pub fn part_1(input: String) -> Int {
   input
   |> string.trim
   |> string.split("\n")
@@ -46,7 +34,7 @@ fn part_1(input: String) -> Int {
   |> int.sum
 }
 
-fn part_2(input: String) -> Int {
+pub fn part_2(input: String) -> Int {
   let letters = "one|two|three|four|five|six|seven|eight|nine"
   let assert Ok(re1) = regex.from_string("\\d|" <> letters)
   let assert Ok(re2) = regex.from_string("\\d|" <> letters |> string.reverse)

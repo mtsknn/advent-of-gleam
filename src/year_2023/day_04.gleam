@@ -3,12 +3,10 @@ import gleam/dict
 import gleam/int
 import gleam/list
 import gleam/option.{type Option}
-import gleam/result
 import gleam/set
 import gleam/string
-import utils
 
-const example_input = "
+pub const example_input = "
 Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
 Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
 Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
@@ -17,27 +15,9 @@ Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
 Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
 "
 
-pub fn main() {
-  solve(using: example_input)
-  |> utils.log_example_results
-
-  utils.read_input(2023, 4)
-  |> result.map(fn(input) {
-    solve(using: input)
-    |> utils.log_full_results
-  })
-}
-
-fn solve(using input: String) -> #(Int, Int) {
+pub fn part_1(input: String) -> Int {
   let matching_numbers = count_matching_numbers(input)
 
-  let result_1 = part_1(matching_numbers)
-  let result_2 = part_2(matching_numbers)
-
-  #(result_1, result_2)
-}
-
-fn part_1(matching_numbers: List(Int)) -> Int {
   matching_numbers
   |> list.fold(0, fn(sum, count) {
     case count {
@@ -47,7 +27,9 @@ fn part_1(matching_numbers: List(Int)) -> Int {
   })
 }
 
-fn part_2(matching_numbers: List(Int)) -> Int {
+pub fn part_2(input: String) -> Int {
+  let matching_numbers = count_matching_numbers(input)
+
   matching_numbers
   |> list.index_fold(
     dict.new(),

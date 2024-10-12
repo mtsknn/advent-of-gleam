@@ -5,9 +5,8 @@ import gleam/pair
 import gleam/regex.{Match}
 import gleam/result
 import gleam/string
-import utils
 
-const example_input = "
+pub const example_input = "
 467..114..
 ...*......
 ..35..633.
@@ -28,28 +27,10 @@ type Symbol {
   Symbol(x: Int, y: Int, value: String)
 }
 
-pub fn main() {
-  solve(using: example_input)
-  |> utils.log_example_results
-
-  utils.read_input(2023, 3)
-  |> result.map(fn(input) {
-    solve(using: input)
-    |> utils.log_full_results
-  })
-}
-
-fn solve(using input: String) -> #(Int, Int) {
+pub fn part_1(input: String) -> Int {
   let numbers = get_numbers(input)
   let symbols = get_symbols(input)
 
-  let result_1 = part_1(numbers, symbols)
-  let result_2 = part_2(numbers, symbols)
-
-  #(result_1, result_2)
-}
-
-fn part_1(numbers: List(Number), symbols: List(Symbol)) -> Int {
   numbers
   |> list.filter_map(fn(number) {
     let neighbor_coords =
@@ -69,7 +50,10 @@ fn part_1(numbers: List(Number), symbols: List(Symbol)) -> Int {
   |> int.sum
 }
 
-fn part_2(numbers: List(Number), symbols: List(Symbol)) -> Int {
+pub fn part_2(input: String) -> Int {
+  let numbers = get_numbers(input)
+  let symbols = get_symbols(input)
+
   symbols
   |> list.filter(fn(symbol) { symbol.value == "*" })
   |> list.filter_map(fn(gear) {

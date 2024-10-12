@@ -5,9 +5,8 @@ import gleam/option.{Some}
 import gleam/regex.{Match}
 import gleam/result
 import gleam/string
-import utils
 
-const example_input = "
+pub const example_input = "
 Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
 Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
@@ -21,27 +20,9 @@ type Color =
 type MaxCubeAmounts =
   Dict(Color, Int)
 
-pub fn main() {
-  solve(using: example_input)
-  |> utils.log_example_results
-
-  utils.read_input(2023, 2)
-  |> result.map(fn(input) {
-    solve(using: input)
-    |> utils.log_full_results
-  })
-}
-
-fn solve(using input: String) -> #(Int, Int) {
+pub fn part_1(input: String) -> Int {
   let max_cube_amounts = parse_input(input)
 
-  let result_1 = part_1(max_cube_amounts)
-  let result_2 = part_2(max_cube_amounts)
-
-  #(result_1, result_2)
-}
-
-fn part_1(max_cube_amounts: List(MaxCubeAmounts)) -> Int {
   max_cube_amounts
   |> list.index_fold(0, fn(sum, cube_amounts, index) {
     let game_number = index + 1
@@ -58,7 +39,9 @@ fn part_1(max_cube_amounts: List(MaxCubeAmounts)) -> Int {
   })
 }
 
-fn part_2(max_cube_amounts: List(MaxCubeAmounts)) -> Int {
+pub fn part_2(input: String) -> Int {
+  let max_cube_amounts = parse_input(input)
+
   max_cube_amounts
   |> list.fold(0, fn(sum, amounts) {
     sum
