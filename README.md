@@ -42,3 +42,22 @@ Though note that the test assertions use my personal results
 - [`year_2023/day_04.gleam`](./src/year_2023/day_04.gleam) × [adventofcode.com/2023/day/4](https://adventofcode.com/2023/day/4)
   - Part 2 was silly (i.e. fun),
     and I like how simple my `number_list_to_numbers` function turned out.
+- [`year_2023/day_05.gleam`](./src/year_2023/day_05.gleam) × [adventofcode.com/2023/day/5](https://adventofcode.com/2023/day/5)
+
+  - Part 2 was tough.
+
+    With my puzzle input,
+    there are 1,638,141,121 seed numbers.
+
+    Iterating over the seed numbers one by one would take an eternity.
+
+    I tried to parallelize the iterations with [OTP Tasks](https://github.com/gleam-lang/otp),
+    but that still took too long –
+    about 3 minutes on my machine.
+
+    Eventually I realized to iterate over number ranges instead of single numbers.
+    Now Part 2 runs in less than 0.02 seconds (on my machine).
+
+    But I'm glad I tried the parallelization route,
+    as it made me start learning that OTP stuff
+    (using [Benjamin Peinhardt's _Learn OTP w/ Gleam_ repo](https://github.com/bcpeinhardt/learn_otp_with_gleam)).
