@@ -4,23 +4,6 @@ import gleam/regex.{Match}
 import gleam/result
 import gleam/string
 
-pub const part_1_example_input = "
-1abc2
-pqr3stu8vwx
-a1b2c3d4e5f
-treb7uchet
-"
-
-pub const part_2_example_input = "
-two1nine
-eightwothree
-abcone2threexyz
-xtwone3four
-4nineeightseven2
-zoneight234
-7pqrstsixteen
-"
-
 pub fn part_1(input: String) -> Int {
   input
   |> string.trim

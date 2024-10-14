@@ -6,19 +6,6 @@ import gleam/regex.{Match}
 import gleam/result
 import gleam/string
 
-pub const example_input = "
-467..114..
-...*......
-..35..633.
-......#...
-617*......
-.....+.58.
-..592.....
-......755.
-...$.*....
-.664.598..
-"
-
 type Number {
   Number(x1: Int, x2: Int, y: Int, value: Int)
 }
