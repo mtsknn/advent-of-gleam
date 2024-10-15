@@ -46,10 +46,11 @@ fn count_matching_numbers(input: String) -> List(Int) {
   |> string.trim
   |> string.split("\n")
   |> list.map(fn(line) {
-    let assert Ok(#(left, right)) = line |> string.split_once(" | ")
-
-    let winning_numbers = number_list_to_numbers(left) |> set.from_list
-    let elfs_numbers = number_list_to_numbers(right) |> set.from_list
+    let assert [winning_numbers, elfs_numbers] =
+      line
+      |> string.split(" | ")
+      |> list.map(number_list_to_numbers)
+      |> list.map(set.from_list)
 
     set.intersection(winning_numbers, elfs_numbers)
     |> set.size
