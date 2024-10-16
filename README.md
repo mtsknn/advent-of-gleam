@@ -63,3 +63,9 @@ Though note that the test assertions use my personal results
     (using [Benjamin Peinhardt's _Learn OTP w/ Gleam_ repo](https://github.com/bcpeinhardt/learn_otp_with_gleam)).
 
 - [`year_2023/day_06.gleam`](./src/year_2023/day_06.gleam) × [adventofcode.com/2023/day/6](https://adventofcode.com/2023/day/6)
+- [`year_2023/day_07.gleam`](./src/year_2023/day_07.gleam) × [adventofcode.com/2023/day/7](https://adventofcode.com/2023/day/7)
+  - I'm quite pleased with the approach I came up with:
+    calculating the rank of a hand type by counting the number of different cards,
+    and calculating the rank of cards by handling the cards as (hexadecimal) numbers.
+- [`year_2023/day_08.gleam`](./src/year_2023/day_08.gleam) × [adventofcode.com/2023/day/8](https://adventofcode.com/2023/day/8)
+- [`year_2023/day_09.gleam`](./src/year_2023/day_09.gleam) × [adventofcode.com/2023/day/9](https://adventofcode.com/2023/day/9)
