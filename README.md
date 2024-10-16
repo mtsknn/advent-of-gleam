@@ -61,3 +61,5 @@ Though note that the test assertions use my personal results
     But I'm glad I tried the parallelization route,
     as it made me start learning that OTP stuff
     (using [Benjamin Peinhardt's _Learn OTP w/ Gleam_ repo](https://github.com/bcpeinhardt/learn_otp_with_gleam)).
+
+- [`year_2023/day_06.gleam`](./src/year_2023/day_06.gleam) × [adventofcode.com/2023/day/6](https://adventofcode.com/2023/day/6)
