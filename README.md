@@ -69,3 +69,28 @@ Though note that the test assertions use my personal results
     and calculating the rank of cards by handling the cards as (hexadecimal) numbers.
 - [`year_2023/day_08.gleam`](./src/year_2023/day_08.gleam) × [adventofcode.com/2023/day/8](https://adventofcode.com/2023/day/8)
 - [`year_2023/day_09.gleam`](./src/year_2023/day_09.gleam) × [adventofcode.com/2023/day/9](https://adventofcode.com/2023/day/9)
+- [`year_2023/day_10.gleam`](./src/year_2023/day_10.gleam) × [adventofcode.com/2023/day/10](https://adventofcode.com/2023/day/10)
+
+  - Ahh, I love how [eleganto](https://www.youtube.com/watch?v=Ywr5E_q8hiM) my solution is.
+
+    Part 2 is impossible (fight me) without specific math knowledge –
+    which I didn't have,
+    so I had to do some digging.
+
+    At first I tried to loop over all points not on the path
+    and check if each point is inside or outside the path.
+    Based on [_Point in polygon_ on Wikipedia](https://en.wikipedia.org/wiki/Point_in_polygon),
+    I tried a ray casting algorithm.
+
+    Well, it didn't work,
+    so I went to [/r/adventofcode](https://old.reddit.com/r/adventofcode/) to look for spoilers.
+    I found two curious terms:
+
+    - [_Shoelace formula_ on Wikipedia](https://en.wikipedia.org/wiki/Shoelace_formula)
+    - [_Pick's theorem_ on Wikipedia](https://en.wikipedia.org/wiki/Pick%27s_theorem)
+
+    A-ha, so instead of looping over all non-path points,
+    I need to treat the path as a polygon,
+    and then calculate the polygon's area,
+    and then subtract the amount of boundary (non-interior) points from the area...
+    who would have thought!
