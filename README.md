@@ -94,3 +94,5 @@ Though note that the test assertions use my personal results
     and then calculate the polygon's area,
     and then subtract the amount of boundary (non-interior) points from the area...
     who would have thought!
+
+- [`year_2023/day_11.gleam`](./src/year_2023/day_11.gleam) × [adventofcode.com/2023/day/11](https://adventofcode.com/2023/day/11)
