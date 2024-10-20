@@ -144,3 +144,10 @@ Though note that the test assertions use my personal results
 
   I don't understand any of those ("dynamic programming"? "DFA"?),
   but I'm putting these links here for future reference.
+
+- [`year_2023/day_13.gleam`](./src/year_2023/day_13.gleam) × [adventofcode.com/2023/day/13](https://adventofcode.com/2023/day/13)
+
+  This felt very easy after day 12. :P
+
+  Runs in 0.022s on my machine,
+  so I won't bother optimizing this further.
