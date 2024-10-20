@@ -40,59 +40,63 @@ Though note that the test assertions use my personal results
 - [`year_2023/day_02.gleam`](./src/year_2023/day_02.gleam) × [adventofcode.com/2023/day/2](https://adventofcode.com/2023/day/2)
 - [`year_2023/day_03.gleam`](./src/year_2023/day_03.gleam) × [adventofcode.com/2023/day/3](https://adventofcode.com/2023/day/3)
 - [`year_2023/day_04.gleam`](./src/year_2023/day_04.gleam) × [adventofcode.com/2023/day/4](https://adventofcode.com/2023/day/4)
-  - Part 2 was silly (i.e. fun),
-    and I like how simple my `number_list_to_numbers` function turned out.
+
+  Part 2 was silly (i.e. fun),
+  and I like how simple my `number_list_to_numbers` function turned out.
+
 - [`year_2023/day_05.gleam`](./src/year_2023/day_05.gleam) × [adventofcode.com/2023/day/5](https://adventofcode.com/2023/day/5)
 
-  - Part 2 was tough.
+  Part 2 was tough.
 
-    With my puzzle input,
-    there are 1,638,141,121 seed numbers.
+  With my puzzle input,
+  there are 1,638,141,121 seed numbers.
 
-    Iterating over the seed numbers one by one would take an eternity.
+  Iterating over the seed numbers one by one would take an eternity.
 
-    I tried to parallelize the iterations with [OTP Tasks](https://hexdocs.pm/gleam_otp/gleam/otp/task.html),
-    but that still took too long –
-    about 3 minutes on my machine.
+  I tried to parallelize the iterations with [OTP Tasks](https://hexdocs.pm/gleam_otp/gleam/otp/task.html),
+  but that still took too long –
+  about 3 minutes on my machine.
 
-    Eventually I realized to iterate over number ranges instead of single numbers.
-    Now Part 2 runs in less than 0.02 seconds (on my machine).
+  Eventually I realized to iterate over number ranges instead of single numbers.
+  Now Part 2 runs in less than 0.02 seconds (on my machine).
 
-    But I'm glad I tried the parallelization route,
-    as it made me start learning that OTP stuff
-    (using [Benjamin Peinhardt's _Learn OTP w/ Gleam_ repo](https://github.com/bcpeinhardt/learn_otp_with_gleam)).
+  But I'm glad I tried the parallelization route,
+  as it made me start learning that OTP stuff
+  (using [Benjamin Peinhardt's _Learn OTP w/ Gleam_ repo](https://github.com/bcpeinhardt/learn_otp_with_gleam)).
 
 - [`year_2023/day_06.gleam`](./src/year_2023/day_06.gleam) × [adventofcode.com/2023/day/6](https://adventofcode.com/2023/day/6)
 - [`year_2023/day_07.gleam`](./src/year_2023/day_07.gleam) × [adventofcode.com/2023/day/7](https://adventofcode.com/2023/day/7)
-  - I'm quite pleased with the approach I came up with:
-    calculating the rank of a hand type by counting the number of different cards,
-    and calculating the rank of cards by handling the cards as (hexadecimal) numbers.
+
+  I'm quite pleased with the approach I came up with:
+  calculating the rank of a hand type by counting the number of different cards,
+  and calculating the rank of cards by handling the cards as (hexadecimal) numbers.
+
 - [`year_2023/day_08.gleam`](./src/year_2023/day_08.gleam) × [adventofcode.com/2023/day/8](https://adventofcode.com/2023/day/8)
 - [`year_2023/day_09.gleam`](./src/year_2023/day_09.gleam) × [adventofcode.com/2023/day/9](https://adventofcode.com/2023/day/9)
 - [`year_2023/day_10.gleam`](./src/year_2023/day_10.gleam) × [adventofcode.com/2023/day/10](https://adventofcode.com/2023/day/10)
 
-  - Ahh, I love how [eleganto](https://www.youtube.com/watch?v=Ywr5E_q8hiM) my solution is.
+  Ahh, I love how [eleganto](https://www.youtube.com/watch?v=Ywr5E_q8hiM) my solution is.
 
-    Part 2 is impossible (fight me) without specific math knowledge –
-    which I didn't have,
-    so I had to do some digging.
+  Part 2 is impossible (fight me) without specific math knowledge –
+  which I didn't have,
+  so I had to do some digging.
 
-    At first I tried to loop over all points not on the path
-    and check if each point is inside or outside the path.
-    Based on [_Point in polygon_ on Wikipedia](https://en.wikipedia.org/wiki/Point_in_polygon),
-    I tried a ray casting algorithm.
+  At first I tried to loop over all points not on the path
+  and check if each point is inside or outside the path.
+  Based on [_Point in polygon_ on Wikipedia](https://en.wikipedia.org/wiki/Point_in_polygon),
+  I tried a ray casting algorithm.
 
-    Well, it didn't work,
-    so I went to [/r/adventofcode](https://old.reddit.com/r/adventofcode/) to look for spoilers.
-    I found two curious terms:
+  Well, it didn't work,
+  so I went to [/r/adventofcode](https://old.reddit.com/r/adventofcode/) to look for spoilers.
+  I found two curious terms:
 
-    - [_Shoelace formula_ on Wikipedia](https://en.wikipedia.org/wiki/Shoelace_formula)
-    - [_Pick's theorem_ on Wikipedia](https://en.wikipedia.org/wiki/Pick%27s_theorem)
+  - [_Shoelace formula_ on Wikipedia](https://en.wikipedia.org/wiki/Shoelace_formula)
+  - [_Pick's theorem_ on Wikipedia](https://en.wikipedia.org/wiki/Pick%27s_theorem)
 
-    A-ha, so instead of looping over all non-path points,
-    I need to treat the path as a polygon,
-    and then calculate the polygon's area,
-    and then subtract the amount of boundary (non-interior) points from the area...
-    who would have thought!
+  A-ha, so instead of looping over all non-path points,
+  I need to treat the path as a polygon,
+  and then calculate the polygon's area,
+  and then subtract the amount of boundary (non-interior) points from the area...
+  who would have thought!
 
 - [`year_2023/day_11.gleam`](./src/year_2023/day_11.gleam) × [adventofcode.com/2023/day/11](https://adventofcode.com/2023/day/11)
