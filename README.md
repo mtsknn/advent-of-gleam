@@ -51,7 +51,7 @@ Though note that the test assertions use my personal results
 
     Iterating over the seed numbers one by one would take an eternity.
 
-    I tried to parallelize the iterations with [OTP Tasks](https://github.com/gleam-lang/otp),
+    I tried to parallelize the iterations with [OTP Tasks](https://hexdocs.pm/gleam_otp/gleam/otp/task.html),
     but that still took too long –
     about 3 minutes on my machine.
 
