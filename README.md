@@ -75,7 +75,7 @@ Though note that the test assertions use my personal results
 - [`year_2023/day_09.gleam`](./src/year_2023/day_09.gleam) × [adventofcode.com/2023/day/9](https://adventofcode.com/2023/day/9)
 - [`year_2023/day_10.gleam`](./src/year_2023/day_10.gleam) × [adventofcode.com/2023/day/10](https://adventofcode.com/2023/day/10)
 
-  Ahh, I love how [eleganto](https://www.youtube.com/watch?v=Ywr5E_q8hiM) my solution is.
+  Ahh, I love how [_eleganto_](https://www.youtube.com/watch?v=Ywr5E_q8hiM) my solution is.
 
   Part 2 is impossible (fight me) without specific math knowledge –
   which I didn't have,
