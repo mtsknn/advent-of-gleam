@@ -42,7 +42,9 @@ Though note that the test assertions use my personal results
 - [`year_2023/day_04.gleam`](./src/year_2023/day_04.gleam) × [adventofcode.com/2023/day/4](https://adventofcode.com/2023/day/4)
 
   Part 2 was silly (i.e. fun),
-  and I like how simple my `number_list_to_numbers` function turned out.
+  and I like how simple my
+  [`number_list_to_numbers` function](https://github.com/mtsknn/advent-of-gleam/blob/b283e0c8386fc3794dc8744ec890b38e49bc0acd/src/year_2023/day_04.gleam#L60-L64)
+  turned out.
 
 - [`year_2023/day_05.gleam`](./src/year_2023/day_05.gleam) × [adventofcode.com/2023/day/5](https://adventofcode.com/2023/day/5)
 
