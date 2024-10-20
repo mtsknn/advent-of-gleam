@@ -102,3 +102,45 @@ Though note that the test assertions use my personal results
   who would have thought!
 
 - [`year_2023/day_11.gleam`](./src/year_2023/day_11.gleam) × [adventofcode.com/2023/day/11](https://adventofcode.com/2023/day/11)
+- [`year_2023/day_12.gleam`](./src/year_2023/day_12.gleam) × [adventofcode.com/2023/day/12](https://adventofcode.com/2023/day/12)
+
+  I managed to get Part 1 (with example input + full input) and Part 2 (with only example input)
+  to run in about 0.07s (on my machine).
+
+  Then I struggled in Part 2 with full input.
+
+  TL;DR: The secret ingredient I was missing is memoization.
+
+  It was not a new concept to me,
+  but implementing memoization in a functional language with immutable data structures
+  felt like a mystery.
+
+  And it still feels like it,
+  but luckily I found [`rememo`](https://hexdocs.pm/rememo/)
+  which implements memoization with ["Erlang Term Storage"](https://www.erlang.org/doc/apps/stdlib/ets.html) (whatever that is)
+  and is a breeze to use.
+
+  After adding memoization with `rememo`,
+  the run time for Part 2 with full input
+  dropped from eternity to about 0.43s.
+
+  Parallelizing the work with [OTP Tasks](https://hexdocs.pm/gleam_otp/gleam/otp/task.html)
+  dropped the run time further to about 0.15s.
+
+  Running both parts, with example input + full input,
+  takes about 0.18s on my machine.
+  Not bad!
+
+  When looking for help,
+  I liked [David Brownman's step-by-step explanation for 2023/12](https://advent-of-code.xavd.id/writeups/2023/day/12/).
+  Reading that page helped me simplify my code a bit.
+
+  Three interesting alternative approaches that I found
+  via the [2023/12 megathread on /r/adventofcode](https://old.reddit.com/r/adventofcode/comments/18ge41g/2023_day_12_solutions/):
+
+  - [Dynamic programming approach in Rust](https://github.com/maneatingape/advent-of-code-rust/blob/main/src/year2023/day12.rs)
+  - ["Using DFA (Deterministic Finite Automata) to turn an exponential problem to a linear one"](https://alexoxorn.github.io/posts/aoc-day12-regular_languages/)
+  - [Another DFA solution/explanation](https://github.com/clrfl/AdventOfCode2023/blob/master/12/explanation.ipynb)
+
+  I don't understand any of those ("dynamic programming"? "DFA"?),
+  but I'm putting these links here for future reference.
