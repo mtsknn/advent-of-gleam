@@ -36,17 +36,17 @@ Though note that the test assertions use my personal results
 
 ## Solutions
 
-- [`year_2023/day_01.gleam`](./src/year_2023/day_01.gleam) × [adventofcode.com/2023/day/1](https://adventofcode.com/2023/day/1)
-- [`year_2023/day_02.gleam`](./src/year_2023/day_02.gleam) × [adventofcode.com/2023/day/2](https://adventofcode.com/2023/day/2)
-- [`year_2023/day_03.gleam`](./src/year_2023/day_03.gleam) × [adventofcode.com/2023/day/3](https://adventofcode.com/2023/day/3)
-- [`year_2023/day_04.gleam`](./src/year_2023/day_04.gleam) × [adventofcode.com/2023/day/4](https://adventofcode.com/2023/day/4)
+- [**`year_2023/day_01.gleam`**](./src/year_2023/day_01.gleam) × [adventofcode.com/2023/day/1](https://adventofcode.com/2023/day/1)
+- [**`year_2023/day_02.gleam`**](./src/year_2023/day_02.gleam) × [adventofcode.com/2023/day/2](https://adventofcode.com/2023/day/2)
+- [**`year_2023/day_03.gleam`**](./src/year_2023/day_03.gleam) × [adventofcode.com/2023/day/3](https://adventofcode.com/2023/day/3)
+- [**`year_2023/day_04.gleam`**](./src/year_2023/day_04.gleam) × [adventofcode.com/2023/day/4](https://adventofcode.com/2023/day/4)
 
   Part 2 was silly (i.e. fun),
   and I like how simple my
   [`number_list_to_numbers` function](https://github.com/mtsknn/advent-of-gleam/blob/b283e0c8386fc3794dc8744ec890b38e49bc0acd/src/year_2023/day_04.gleam#L60-L64)
   turned out.
 
-- [`year_2023/day_05.gleam`](./src/year_2023/day_05.gleam) × [adventofcode.com/2023/day/5](https://adventofcode.com/2023/day/5)
+- [**`year_2023/day_05.gleam`**](./src/year_2023/day_05.gleam) × [adventofcode.com/2023/day/5](https://adventofcode.com/2023/day/5)
 
   Part 2 was tough.
 
@@ -66,16 +66,16 @@ Though note that the test assertions use my personal results
   as it made me start learning that OTP stuff
   (using [Benjamin Peinhardt's _Learn OTP w/ Gleam_ repo](https://github.com/bcpeinhardt/learn_otp_with_gleam)).
 
-- [`year_2023/day_06.gleam`](./src/year_2023/day_06.gleam) × [adventofcode.com/2023/day/6](https://adventofcode.com/2023/day/6)
-- [`year_2023/day_07.gleam`](./src/year_2023/day_07.gleam) × [adventofcode.com/2023/day/7](https://adventofcode.com/2023/day/7)
+- [**`year_2023/day_06.gleam`**](./src/year_2023/day_06.gleam) × [adventofcode.com/2023/day/6](https://adventofcode.com/2023/day/6)
+- [**`year_2023/day_07.gleam`**](./src/year_2023/day_07.gleam) × [adventofcode.com/2023/day/7](https://adventofcode.com/2023/day/7)
 
   I'm quite pleased with the approach I came up with:
   calculating the rank of a hand type by counting the number of different cards,
   and calculating the rank of cards by handling the cards as (hexadecimal) numbers.
 
-- [`year_2023/day_08.gleam`](./src/year_2023/day_08.gleam) × [adventofcode.com/2023/day/8](https://adventofcode.com/2023/day/8)
-- [`year_2023/day_09.gleam`](./src/year_2023/day_09.gleam) × [adventofcode.com/2023/day/9](https://adventofcode.com/2023/day/9)
-- [`year_2023/day_10.gleam`](./src/year_2023/day_10.gleam) × [adventofcode.com/2023/day/10](https://adventofcode.com/2023/day/10)
+- [**`year_2023/day_08.gleam`**](./src/year_2023/day_08.gleam) × [adventofcode.com/2023/day/8](https://adventofcode.com/2023/day/8)
+- [**`year_2023/day_09.gleam`**](./src/year_2023/day_09.gleam) × [adventofcode.com/2023/day/9](https://adventofcode.com/2023/day/9)
+- [**`year_2023/day_10.gleam`**](./src/year_2023/day_10.gleam) × [adventofcode.com/2023/day/10](https://adventofcode.com/2023/day/10)
 
   Ahh, I love how [_eleganto_](https://www.youtube.com/watch?v=Ywr5E_q8hiM) my solution is.
 
@@ -101,8 +101,8 @@ Though note that the test assertions use my personal results
   and then subtract the amount of boundary (non-interior) points from the area...
   who would have thought!
 
-- [`year_2023/day_11.gleam`](./src/year_2023/day_11.gleam) × [adventofcode.com/2023/day/11](https://adventofcode.com/2023/day/11)
-- [`year_2023/day_12.gleam`](./src/year_2023/day_12.gleam) × [adventofcode.com/2023/day/12](https://adventofcode.com/2023/day/12)
+- [**`year_2023/day_11.gleam`**](./src/year_2023/day_11.gleam) × [adventofcode.com/2023/day/11](https://adventofcode.com/2023/day/11)
+- [**`year_2023/day_12.gleam`**](./src/year_2023/day_12.gleam) × [adventofcode.com/2023/day/12](https://adventofcode.com/2023/day/12)
 
   I managed to get Part 1 (with example input + full input) and Part 2 (with only example input)
   to run in about 0.07s (on my machine).
@@ -145,7 +145,7 @@ Though note that the test assertions use my personal results
   I don't understand any of those ("dynamic programming"? "DFA"?),
   but I'm putting these links here for future reference.
 
-- [`year_2023/day_13.gleam`](./src/year_2023/day_13.gleam) × [adventofcode.com/2023/day/13](https://adventofcode.com/2023/day/13)
+- [**`year_2023/day_13.gleam`**](./src/year_2023/day_13.gleam) × [adventofcode.com/2023/day/13](https://adventofcode.com/2023/day/13)
 
   This felt very easy after day 12. :P
 
