@@ -198,3 +198,5 @@ Though note that the test assertions use my personal results
   a poor result,
   which I attribute to Gleam's immutable data structures.
   (Mutating lists/arrays could maybe be significantly faster.)
+
+- [**`year_2023/day_15.gleam`**](./src/year_2023/day_15.gleam) × [adventofcode.com/2023/day/15](https://adventofcode.com/2023/day/15)
