@@ -151,3 +151,50 @@ Though note that the test assertions use my personal results
 
   Runs in 0.022s on my machine,
   so I won't bother optimizing this further.
+
+- [**`year_2023/day_14.gleam`**](./src/year_2023/day_14.gleam) × [adventofcode.com/2023/day/14](https://adventofcode.com/2023/day/14)
+
+  1. Rotate the platform 90 degrees to the left.
+  2. North is on the left, south is on the right.
+  3. ???
+  4. Profit!!
+
+  I.e. by rotating the platform back and forth,
+  the rocks need to be rolled only horizontally,
+  which is much easier than rolling them vertically.
+
+  The constant rotations take their toll though;
+  the tests run in about 295ms on my machine.
+  (Actually I don't know if the rotations are the bottleneck.)
+
+  On the other hand,
+  I was stuck at about 470ms for many hours (!),
+  so in the end I'm quite pleased in my sub-300ms result.
+
+  Two things helped me break the 300ms barrier:
+
+  - Mapping the string values (`#`, `O` and `.`) to a custom type (`Boulder`, `Rock` and `Space`)
+    lowered the run time from 470ms to 370ms.
+    This surprised me –
+    maybe custom types are cheaper to compare etc. than strings.
+    But 100ms seems still very much.
+  - Optimizing the rolling algorithm lowered the run time from 370ms to 295ms.
+    I'm quite proud of this new rolling algorithm which uses queues.
+    This could come in handy in the future
+    if other days' puzzles require similar "sorting" of a few kinds of items.
+
+  With strings (instead of the custom type) and the new rolling algorithm,
+  the run time difference is 40ms (i.e. 295ms vs 335ms).
+  Less than 100ms, but the difference is still surprisingly large.
+
+  So today's lesson:
+  mapping strings to custom types can give a surprising speed boost.
+
+  I tried another approach as well:
+  turning the platform into a map (`Dict(Coord, Item)`)
+  and iterating over each row and column one-by-one.
+  So no platform rotations,
+  but a test run still took over 700ms (IIRC) –
+  a poor result,
+  which I attribute to Gleam's immutable data structures.
+  (Mutating lists/arrays could maybe be significantly faster.)
