@@ -200,3 +200,12 @@ Though note that the test assertions use my personal results
   (Mutating lists/arrays could maybe be significantly faster.)
 
 - [**`year_2023/day_15.gleam`**](./src/year_2023/day_15.gleam) × [adventofcode.com/2023/day/15](https://adventofcode.com/2023/day/15)
+- [**`year_2023/day_16.gleam`**](./src/year_2023/day_16.gleam) × [adventofcode.com/2023/day/16](https://adventofcode.com/2023/day/16)
+
+  Like day 10 – walking on a map –
+  but now with multiple, overlapping, potentially looping paths.
+
+  I dislike that running the tests takes about 380 ms (that's slow).
+
+  But I like that I came up with the `deferred` "trick"
+  to keep the `walk` function tail-recursive.
